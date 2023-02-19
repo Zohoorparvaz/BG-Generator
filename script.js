@@ -3,12 +3,10 @@ var color1 = document.getElementById("color1");
 var color2 = document.getElementById("color2");
 var theBody = document.getElementById("the-body");
 
-console.log("bg");
+function setGradient() {
+  theBody.style.background = "linear-gradient(to right, " + color1.value + "," + color2.value + ")"
+}
 
-// function setGradient() {
-// }
-
-color1.addEventListener("click", function () {
-  console.log("click");
-})
+color1.addEventListener("input", setGradient)
+color2.addEventListener("input", setGradient)
 
